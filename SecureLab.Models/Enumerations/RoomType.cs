@@ -13,5 +13,7 @@
         public static string Lab = "Lab";
 
         public static string SeminarRoom = "Seminar Room";
+
+        public static string Other = "Other";
     }
 }

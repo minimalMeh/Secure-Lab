@@ -5,13 +5,19 @@ namespace SecureLab.Domain.Entities
 {
     public class User : IdentityUser
     {
-        User() : base()
+        public User() : base()
         {
-            this.UserRoles = new HashSet<UserRole>();
+            this.UserGroups = new HashSet<UserGroup>();
         }
 
         public string Information { get; set; }
 
-        public ICollection<UserRole> UserRoles { get; set; }
+        public ICollection<UserGroup> UserGroups { get; set; }
+
+        //firstly it searches whether room in one of the allowed groups
+        public string[] AllowedRoomGroups { get; set; }
+
+        //then it searches whether this room certainly allowed
+        public string[] AllowedRooms { get; set; }
     }
 }

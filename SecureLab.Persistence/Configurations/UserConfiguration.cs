@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SecureLab.Domain.Entities;
+using SecureLab.Persistence.Converters;
 
 namespace SecureLab.Persistence.Configurations
 {
@@ -20,6 +21,10 @@ namespace SecureLab.Persistence.Configurations
             builder.Property(e => e.Email).IsRequired().HasMaxLength(30);
 
             builder.Property(e => e.Information).HasMaxLength(256);
+
+            builder.Property(e => e.AllowedRoomGroups).HasConversion(Converter.GroupConverter);
+
+            builder.Property(e => e.AllowedRooms).HasConversion(Converter.GroupConverter);
 
             builder.HasIndex(e => e.UserName).IsUnique();
         }

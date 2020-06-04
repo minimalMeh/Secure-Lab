@@ -17,6 +17,5 @@ namespace SecureLab.Domain.Entities
 
         public ICollection<RoomGroup> RoomGroups { get; set; }
 
-        public string[] AllowedRolesId { get; set; }
     }
 }

@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace SecureLab.Domain.Entities
 {
-    public class RoomGroup
+    public class UserGroup
     {
-        public RoomGroup()
+        public UserGroup()
         {
-            this.Rooms = new HashSet<Room>();
+            this.Users = new HashSet<User>();
         }
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public ICollection<Room> Rooms { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

@@ -1,20 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using SecureLab.Persistence;
 
-namespace SecureLab.Persistence
+namespace SecureLab
 {
-    class SecureLabDbContextFactory : IDesignTimeDbContextFactory<SecureLabDbContext>
+    public class SecureLabDbContextFactory : IDesignTimeDbContextFactory<SecureLabDbContext>
     {
         public SecureLabDbContext CreateDbContext(string[] args)
         {
+            return new SecureLabDbContext(GetOptions());
+        }
+        
+        public static DbContextOptions<SecureLabDbContext> GetOptions()
+        {
             var optionsBuilder = new DbContextOptionsBuilder<SecureLabDbContext>();
-            //TODO: insert connection string
-            optionsBuilder.UseSqlServer("" /*connection string*/);
 
-            return new SecureLabDbContext(optionsBuilder.Options);
+            var builder = new ConfigurationBuilder();
+            builder.SetBasePath(Directory.GetCurrentDirectory());
+            builder.AddJsonFile("appsettings.json");
+            IConfigurationRoot config = builder.Build();
+
+            var connectionString = config.GetConnectionString("DefaultConnection");
+            optionsBuilder.UseSqlServer(connectionString, opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds));
+            return optionsBuilder.Options;
         }
     }
 }

@@ -7,11 +7,11 @@ using SecureLab.Domain.Entities;
 
 namespace SecureLab.Persistence.Configurations
 {
-    class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
+    class UserGroupConfiguration : IEntityTypeConfiguration<UserGroup>
     {
-        public void Configure(EntityTypeBuilder<UserRole> builder)
+        public void Configure(EntityTypeBuilder<UserGroup> builder)
         {
-            builder.HasKey(e => new {e.UserId, e.RoleId});
+            builder.HasKey(e => e.Id);
         }
     }
 }

@@ -14,6 +14,11 @@ namespace SecureLab
     {
         public static void Main(string[] args)
         {
+            var config = new ConfigurationBuilder()
+           .SetBasePath(Directory.GetCurrentDirectory())
+           .AddJsonFile("appsettings.json", optional: true)
+           .Build();
+
             CreateWebHostBuilder(args).Build().Run();
         }
 
