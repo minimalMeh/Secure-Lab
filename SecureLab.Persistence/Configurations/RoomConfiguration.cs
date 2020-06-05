@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SecureLab.Domain.Entities;
-using System;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SecureLab.Persistence.Configurations
 {

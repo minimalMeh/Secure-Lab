@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using SecureLab.Domain.Entities;
@@ -42,6 +40,8 @@ namespace SecureLab.Persistence
             modelBuilder.ApplyConfiguration(new RoomGroupConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserGroupConfiguration());
+            modelBuilder.ApplyConfiguration(new RoomsToRoomGroupsConfiguration());
+            modelBuilder.ApplyConfiguration(new UsersToUserGroupsConfiguration());
         }
     }
 }

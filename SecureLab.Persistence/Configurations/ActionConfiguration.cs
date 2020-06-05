@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SecureLab.Domain.Entities;
-using Microsoft.EntityFrameworkCore.SqlServer;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SecureLab.Persistence.Configurations
 {
