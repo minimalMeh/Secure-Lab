@@ -4,9 +4,9 @@ using SecureLab.Domain.Entities;
 
 namespace SecureLab.Persistence.Configurations
 {
-    class RoomGroupConfiguration : IEntityTypeConfiguration<RoomGroup>
+    class UserGroupConfiguration : IEntityTypeConfiguration<UserGroup>
     {
-        public void Configure(EntityTypeBuilder<RoomGroup> builder)
+        public void Configure(EntityTypeBuilder<UserGroup> builder)
         {
             builder.HasKey(e => e.Id);
         }

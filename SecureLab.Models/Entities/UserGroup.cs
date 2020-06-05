@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace SecureLab.Domain.Entities
 {
-    public class RoomGroup
+    public class UserGroup
     {
-        public RoomGroup()
+        public UserGroup()
         {
-            this.RoomToRoomGroups = new HashSet<RoomsToRoomGroups>();
+            this.UsersToUserGroups = new HashSet<UsersToUserGroups>();
         }
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public ICollection<RoomsToRoomGroups> RoomToRoomGroups { get; set; }
+        public ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
     }
 }

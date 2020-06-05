@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SecureLab.Domain.Entities;
-using Microsoft.EntityFrameworkCore.SqlServer;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SecureLab.Persistence.Configurations
 {
@@ -19,11 +16,7 @@ namespace SecureLab.Persistence.Configurations
 
             builder.Property(e => e.RoomId).IsRequired();
 
-            builder.Property(e => e.Duration).HasColumnType("time(7)");
-
-            builder.Property(e => e.ActionStart).HasColumnType("date");
-
-            builder.Property(e => e.ActionEnd).HasColumnType("date");
+            builder.Property(e => e.ActionTimestamp).HasColumnType("date");
 
             builder.Property(e => e.ActionType).IsRequired().HasMaxLength(4);
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SecureLab.Domain.Entities.ComplexEntities;
+using System;
 using System.Collections.Generic;
 
 namespace SecureLab.Domain.Entities
@@ -7,7 +8,7 @@ namespace SecureLab.Domain.Entities
     {
         public Room()
         {
-            this.RoomGroups = new HashSet<RoomGroup>();
+            this.RoomToRoomGroups = new HashSet<RoomsToRoomGroups>();
         }
         public Guid Id { get; set; }
 
@@ -15,8 +16,7 @@ namespace SecureLab.Domain.Entities
 
         public string RoomType { get; set; }
 
-        public ICollection<RoomGroup> RoomGroups { get; set; }
+        public ICollection<RoomsToRoomGroups> RoomToRoomGroups { get; set; }
 
-        public string[] AllowedRolesId { get; set; }
     }
 }
