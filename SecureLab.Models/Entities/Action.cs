@@ -8,7 +8,7 @@ namespace SecureLab.Domain.Entities
         public Guid UserId { get; set; }
         public virtual User User { get; set; }
         public Guid RoomId { get; set; }
-        public virtual Room Room { get ; set; }
+        public virtual Room Room { get; set; }
         public string ActionType { get; set; }
         public DateTime ActionTimestamp { get; set; }
     }

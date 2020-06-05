@@ -1,6 +1,6 @@
-﻿using System;
+﻿using SecureLab.Domain.Entities.ComplexEntities;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SecureLab.Domain.Entities
 {
@@ -8,10 +8,10 @@ namespace SecureLab.Domain.Entities
     {
         public UserGroup()
         {
-            this.Users = new HashSet<User>();
+            this.UsersToUserGroups = new HashSet<UsersToUserGroups>();
         }
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public ICollection<User> Users { get; set; }
+        public ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
     }
 }
