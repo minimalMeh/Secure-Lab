@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SecureLab.Domain.Entities;
 using SecureLab.Persistence;
 using System;
+using MediatR;
+using FluentValidation.AspNetCore;
+using SecureLab.Application.Users.Commands.CreateUser;
+using FluentValidation;
 
 namespace SecureLab
 {
@@ -20,8 +23,15 @@ namespace SecureLab
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var assembly = AppDomain.CurrentDomain.Load("SecureLab.Application");
+            services.AddMediatR(assembly);
+
             services.AddDbContext<SecureLabDbContext>();
             services.AddIdentity<User, IdentityRole<Guid>>().AddEntityFrameworkStores<SecureLabDbContext>();
+            services.AddMvc( op => op.EnableEndpointRouting = false).AddFluentValidation();
+            services.AddHttpContextAccessor();
+
+            services.AddTransient<IValidator<CreateUserCommand>, CreateUserCommandValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,11 +49,10 @@ namespace SecureLab
                 context.Database.EnsureCreated();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
-
+            app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            app.UseMvc();
+            
         }
     }
 }
