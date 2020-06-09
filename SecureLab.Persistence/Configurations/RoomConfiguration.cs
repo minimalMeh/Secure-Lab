@@ -12,9 +12,9 @@ namespace SecureLab.Persistence.Configurations
 
             builder.Property(e => e.Id).IsRequired().HasColumnName("RoomId");
 
-            builder.Property(e => e.RoomType).IsRequired().HasMaxLength(18);
+            builder.Property(e => e.RoomType).IsRequired().HasColumnType("varchar(50)").IsUnicode(false);
 
-            builder.Property(e => e.Number).IsRequired().HasMaxLength(10);
+            builder.Property(e => e.Number).IsRequired().HasColumnType("varchar(50)");
         }
     }
 }

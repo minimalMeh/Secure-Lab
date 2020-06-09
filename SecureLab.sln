@@ -13,11 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab.Application", "Se
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{0B8BCB28-D7E7-4470-A987-AAFC19441F47}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{CBDD89C9-C65F-4CE3-9F31-98E17605A6EA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{2B911848-0F50-43F8-B7C9-6651352C31B6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C7042B41-8F75-46EF-9CB1-50E864D15ED1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1828B360-82FC-4EC7-A5E6-90223F2EC16E}"
 EndProject
@@ -25,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab.Common", "SecureL
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A66E432B-DD7D-4EE7-9DEB-481889E359E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureLab.Persistence", "SecureLab.Persistence\SecureLab.Persistence.csproj", "{A71FD51A-9D19-4B7A-8353-507075DCC516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab.Persistence", "SecureLab.Persistence\SecureLab.Persistence.csproj", "{A71FD51A-9D19-4B7A-8353-507075DCC516}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

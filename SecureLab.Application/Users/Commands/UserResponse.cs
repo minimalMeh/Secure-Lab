@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SecureLab.Application.Users.Commands.CreateUser
+namespace SecureLab.Application.Users.Commands
 {
     public class UserResponse : INotification
     {

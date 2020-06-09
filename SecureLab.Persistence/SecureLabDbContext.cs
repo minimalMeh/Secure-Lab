@@ -43,5 +43,6 @@ namespace SecureLab.Persistence
             modelBuilder.ApplyConfiguration(new RoomsToRoomGroupsConfiguration());
             modelBuilder.ApplyConfiguration(new UsersToUserGroupsConfiguration());
         }
+        
     }
 }

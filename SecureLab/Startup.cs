@@ -1,15 +1,17 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SecureLab.Domain.Entities;
-using SecureLab.Persistence;
-using System;
 using MediatR;
+using FluentValidation;
+using SecureLab.Persistence;
+using SecureLab.Domain.Entities;
 using FluentValidation.AspNetCore;
 using SecureLab.Application.Users.Commands.CreateUser;
-using FluentValidation;
+using SecureLab.Application.Users.Commands.UpdateUser;
+using Microsoft.EntityFrameworkCore;
 
 namespace SecureLab
 {
@@ -28,10 +30,11 @@ namespace SecureLab
 
             services.AddDbContext<SecureLabDbContext>();
             services.AddIdentity<User, IdentityRole<Guid>>().AddEntityFrameworkStores<SecureLabDbContext>();
-            services.AddMvc( op => op.EnableEndpointRouting = false).AddFluentValidation();
+            services.AddMvc(op => op.EnableEndpointRouting = false).AddFluentValidation();
             services.AddHttpContextAccessor();
 
             services.AddTransient<IValidator<CreateUserCommand>, CreateUserCommandValidator>();
+            services.AddTransient<IValidator<UpdateUserCommand>, UpdateUserCommandValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
