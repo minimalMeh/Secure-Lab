@@ -10,6 +10,7 @@ namespace SecureLab.Domain.Entities
         {
             this.RoomToRoomGroups = new HashSet<RoomsToRoomGroups>();
         }
+
         public Guid Id { get; set; }
 
         public string Number { get; set; }
