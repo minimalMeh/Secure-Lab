@@ -10,7 +10,7 @@
 
         public static string ConferenceRoom = "Conference Room";
 
-        public static string Lab = "Lab";
+        public static string Lab = "Laboratory";
 
         public static string SeminarRoom = "Seminar Room";
 
