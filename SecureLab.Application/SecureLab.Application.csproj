@@ -1,7 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Actions\Commands\CreateAction\" />
+    <Folder Include="Actions\Commands\DeleteAction\" />
+    <Folder Include="Actions\Commands\UpdateAction\" />
+    <Folder Include="Actions\Queries\GetAllActionsByDate\" />
+    <Folder Include="RoomGroups\Commands\CreateRoomGroup\" />
+    <Folder Include="RoomGroups\Commands\DeleteRoomGroup\" />
+    <Folder Include="RoomGroups\Commands\UpdateRoomGroup\" />
+    <Folder Include="Rooms\Commands\CreateRoom\" />
+    <Folder Include="Rooms\Commands\DeleteRoom\" />
+    <Folder Include="Rooms\Commands\UpdateRoom\" />
+    <Folder Include="UserGroups\Commands\CreateUserGroup\" />
+    <Folder Include="UserGroups\Commands\DeleteUserGroup\" />
+    <Folder Include="UserGroups\Commands\UpdateUserGroup\" />
+    <Folder Include="UserGroups\Queries\" />
+    <Folder Include="Users\Commands\DeleteUser\" />
+    <Folder Include="Users\Queries\GetUsersList\" />
+    <Folder Include="Users\Queries\GetUserRole\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SecureLab.Persistence\SecureLab.Persistence.csproj" />
+  </ItemGroup>
 
 </Project>

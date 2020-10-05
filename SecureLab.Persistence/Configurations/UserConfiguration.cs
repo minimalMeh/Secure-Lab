@@ -23,7 +23,7 @@ namespace SecureLab.Persistence.Configurations
 
             builder.Property(e => e.AllowedRooms).HasConversion(Converter.StringParseConverter);
 
-            builder.HasIndex(e => e.UserName).IsUnique();
+            builder.HasIndex(e => e.Email).IsUnique();
         }
     }
 }

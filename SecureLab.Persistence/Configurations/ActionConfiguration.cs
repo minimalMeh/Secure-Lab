@@ -16,7 +16,7 @@ namespace SecureLab.Persistence.Configurations
 
             builder.Property(e => e.RoomId).IsRequired();
 
-            builder.Property(e => e.ActionTimestamp).HasColumnType("date");
+            builder.Property(e => e.ActionTimestamp).HasColumnType("smalldatetime");
 
             builder.Property(e => e.ActionType).IsRequired().HasMaxLength(4);
         }

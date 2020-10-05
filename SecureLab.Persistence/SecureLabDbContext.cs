@@ -35,6 +35,7 @@ namespace SecureLab.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.ApplyConfiguration(new ActionConfiguration());
             modelBuilder.ApplyConfiguration(new RoomConfiguration());
             modelBuilder.ApplyConfiguration(new RoomGroupConfiguration());
@@ -42,6 +43,8 @@ namespace SecureLab.Persistence
             modelBuilder.ApplyConfiguration(new UserGroupConfiguration());
             modelBuilder.ApplyConfiguration(new RoomsToRoomGroupsConfiguration());
             modelBuilder.ApplyConfiguration(new UsersToUserGroupsConfiguration());
+
+
         }
     }
 }

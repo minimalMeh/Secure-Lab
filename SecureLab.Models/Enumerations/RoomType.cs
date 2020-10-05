@@ -14,6 +14,8 @@
 
         public static string SeminarRoom = "Seminar Room";
 
+        public static string Stuff = "Stuff";
+
         public static string Other = "Other";
     }
 }

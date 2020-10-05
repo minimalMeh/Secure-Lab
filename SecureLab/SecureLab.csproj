@@ -1,21 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>e840f129-7a13-49ea-aed1-21717e25b7d4</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Mapper\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SecureLab.Application\SecureLab.Application.csproj" />
     <ProjectReference Include="..\SecureLab.Models\SecureLab.Domain.csproj" />
     <ProjectReference Include="..\SecureLab.Persistence\SecureLab.Persistence.csproj" />
   </ItemGroup>

@@ -14,7 +14,7 @@ namespace SecureLab.Domain.Entities
 
         public string Information { get; set; }
 
-        public ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
+        public virtual ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
 
         //firstly it searches whether room in one of the allowed groups
         public string[] AllowedRoomGroups { get; set; }
