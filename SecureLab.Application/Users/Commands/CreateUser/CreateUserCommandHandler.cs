@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Identity;
 using SecureLab.Domain.Entities;
 using SecureLab.Persistence;
 using System;
@@ -12,11 +13,13 @@ namespace SecureLab.Application.Users.Commands.CreateUser
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserResponse>
     {
         private readonly IMediator _mediator;
+        private readonly UserManager<User> _userManager;
         private readonly SecureLabDbContext _context;
-        public CreateUserCommandHandler(IMediator mediator, SecureLabDbContext context)
+        public CreateUserCommandHandler(IMediator mediator, UserManager<User> userManager, SecureLabDbContext context)
         {
             this._mediator = mediator;
             this._context = context;
+            this._userManager = userManager;
         }
         public async Task<UserResponse> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
@@ -30,6 +33,8 @@ namespace SecureLab.Application.Users.Commands.CreateUser
                 Email = request.Email,
                 Information = request.Information 
             };
+
+            var result = await _userManager.CreateAsync(entity);
 
             _context.Users.Add(entity);
 

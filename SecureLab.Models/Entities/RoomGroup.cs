@@ -12,6 +12,6 @@ namespace SecureLab.Domain.Entities
         }
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public ICollection<RoomsToRoomGroups> RoomToRoomGroups { get; set; }
+        public virtual ICollection<RoomsToRoomGroups> RoomToRoomGroups { get; set; }
     }
 }

@@ -13,6 +13,6 @@ namespace SecureLab.Domain.Entities
         public Guid Id { get; set; }
         public string Title { get; set; }
         // TODO: public string Type { get; set; }
-        public ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
+        public virtual ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
     }
 }

@@ -1,0 +1,121 @@
+body {
+  width: 95%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.sl-margin-left-10 {
+  margin-left: 10%;
+}
+
+.sl-margin-right {
+  margin-right: 5%;
+}
+
+.sl-margin-left {
+  margin-left: 5%;
+  font-size: 20pt;
+  font-weight: 400;
+}
+
+.big-card {
+  height: 800px;
+}
+
+.image-logo {
+  height: 30%;
+  width: auto;
+}
+
+.user-info {
+font-weight: bold;
+}
+
+.user-icon {
+  height: 50px;
+  width: auto;
+}
+
+.input-panel {
+  margin-top: 8%;
+}
+
+.header-create-form {
+  height: 35px;
+  margin-top: 10px;
+  padding: 0 5px 0 5px;
+}
+
+.manage-user_header {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(241, 255, 255);
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.manage-user_header_userinfo {
+  color: white;
+  background-color: azure;
+}
+
+.manage-user_header_userinfo span {
+  font-weight: bold;
+  color: azure;
+}
+
+.tables {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 49.5%;
+}
+
+.table-header {
+  font-weight: bold;
+  color: white;
+}
+
+.auth-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.attendence {
+  display: flex;
+  height: 800px;
+  background-color: azure;
+}
+
+.attendence-calendar {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.attendence-table {
+  margin-top: 40px;
+  margin-left: 25px;
+  background-color: white;
+  width: 63%;
+}
+
+
+.SingleDatePickerInput  {
+  width:300px;
+}

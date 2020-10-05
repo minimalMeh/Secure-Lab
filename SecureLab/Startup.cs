@@ -12,6 +12,8 @@ using FluentValidation.AspNetCore;
 using SecureLab.Application.Users.Commands.CreateUser;
 using SecureLab.Application.Users.Commands.UpdateUser;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using SecureLab.Domain.Entities.ComplexEntities;
 
 namespace SecureLab
 {
@@ -49,7 +51,12 @@ namespace SecureLab
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService<SecureLabDbContext>();
-                context.Database.EnsureCreated();
+                if (context.Database.EnsureCreated())
+                {
+#pragma warning disable CS0618 // Type or member is obsolete
+                    context.Database.ExecuteSqlCommand(@"ALTER DATABASE securelab COLLATE Cyrillic_General_CI_AS;");
+#pragma warning restore CS0618 // Type or member is obsolete
+                }
             }
 
             app.UseStaticFiles();

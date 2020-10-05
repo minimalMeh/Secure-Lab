@@ -16,7 +16,7 @@ namespace SecureLab.Domain.Entities
 
         public string RoomType { get; set; }
 
-        public ICollection<RoomsToRoomGroups> RoomToRoomGroups { get; set; }
+        public virtual ICollection<RoomsToRoomGroups> RoomToRoomGroups { get; set; }
 
     }
 }
