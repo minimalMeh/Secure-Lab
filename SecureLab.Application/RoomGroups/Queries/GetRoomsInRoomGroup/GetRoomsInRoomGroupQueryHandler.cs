@@ -1,13 +1,11 @@
 ﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
-using SecureLab.Application.RoomGroups.Queries;
-using SecureLab.Domain.Entities;
-using SecureLab.Persistence;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using SecureLab.Persistence;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using SecureLab.Application.RoomGroups.Queries;
 
 namespace SecureLab.Application.Users.Commands.CreateUser
 {
@@ -22,8 +20,6 @@ namespace SecureLab.Application.Users.Commands.CreateUser
 
         public async Task<IEnumerable<RoomDTO>> Handle(GetRoomsInRoomGroupQuery request, CancellationToken cancellationToken)
         {
-            // EF Core won't load related properties automatically, so you'll need to explicitly do this
-
             var roomGroup = await this._context.RoomGroups
                             .Include(x => x.RoomToRoomGroups)
                             .ThenInclude(x => x.Room)

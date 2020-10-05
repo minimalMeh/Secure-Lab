@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SecureLab.Application.RoomGroups.Queries
 {
@@ -9,6 +7,5 @@ namespace SecureLab.Application.RoomGroups.Queries
         public Guid RoomId { get; set; }
         public string Number { get; set; }
         public string RoomType { get; set; }
-
     }
 }
