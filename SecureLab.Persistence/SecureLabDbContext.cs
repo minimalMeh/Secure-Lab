@@ -17,9 +17,7 @@ namespace SecureLab.Persistence
 
 
         public SecureLabDbContext(DbContextOptions<SecureLabDbContext> options)
-            : base(options)
-        {
-        }
+            : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -35,7 +33,6 @@ namespace SecureLab.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.ApplyConfiguration(new ActionConfiguration());
             modelBuilder.ApplyConfiguration(new RoomConfiguration());
             modelBuilder.ApplyConfiguration(new RoomGroupConfiguration());
@@ -43,8 +40,6 @@ namespace SecureLab.Persistence
             modelBuilder.ApplyConfiguration(new UserGroupConfiguration());
             modelBuilder.ApplyConfiguration(new RoomsToRoomGroupsConfiguration());
             modelBuilder.ApplyConfiguration(new UsersToUserGroupsConfiguration());
-
-
         }
     }
 }
