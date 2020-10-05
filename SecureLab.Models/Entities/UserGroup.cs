@@ -1,5 +1,5 @@
-﻿using SecureLab.Domain.Entities.ComplexEntities;
-using System;
+﻿using System;
+using SecureLab.Domain.Entities.ComplexEntities;
 using System.Collections.Generic;
 
 namespace SecureLab.Domain.Entities
@@ -12,7 +12,6 @@ namespace SecureLab.Domain.Entities
         }
         public Guid Id { get; set; }
         public string Title { get; set; }
-        // TODO: public string Type { get; set; }
         public virtual ICollection<UsersToUserGroups> UsersToUserGroups { get; set; }
     }
 }

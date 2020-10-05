@@ -7,7 +7,6 @@ namespace SecureLab.Domain.Enumerations
     //TODO:Next release
     class UserGroupType
     {
-        public static string  Student = "Student";
-
+        public static string Student = "Student";
     }
 }

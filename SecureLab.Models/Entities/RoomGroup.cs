@@ -1,5 +1,5 @@
-﻿using SecureLab.Domain.Entities.ComplexEntities;
-using System;
+﻿using System;
+using SecureLab.Domain.Entities.ComplexEntities;
 using System.Collections.Generic;
 
 namespace SecureLab.Domain.Entities
