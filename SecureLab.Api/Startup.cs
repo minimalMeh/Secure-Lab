@@ -12,6 +12,7 @@ using FluentValidation.AspNetCore;
 using SecureLab.Application.Users.Commands.CreateUser;
 using SecureLab.Application.Users.Commands.UpdateUser;
 using Microsoft.EntityFrameworkCore;
+using SecureLab.Api.Middlewares;
 
 namespace SecureLab
 {
@@ -41,10 +42,7 @@ namespace SecureLab
         [System.Obsolete]
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseMiddleware<ErrorHandlingMiddleware>();
 
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
