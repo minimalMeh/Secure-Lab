@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab", "SecureLab\SecureLab.csproj", "{274FB89F-4CD2-4DB3-BACA-AD4F8B3577FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab.Api", "SecureLab.Api\SecureLab.Api.csproj", "{274FB89F-4CD2-4DB3-BACA-AD4F8B3577FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab.Domain", "SecureLab.Models\SecureLab.Domain.csproj", "{693B9109-FD63-42C0-912A-8ECE999E8F50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureLab.Models", "SecureLab.Models\SecureLab.Models.csproj", "{693B9109-FD63-42C0-912A-8ECE999E8F50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F883921A-5649-4A9F-BDB2-9F03C456872B}"
 EndProject

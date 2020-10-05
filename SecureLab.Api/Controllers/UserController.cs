@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using SecureLab.Persistence;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using SecureLab.Application.Users.Commands.CreateUser;
 using SecureLab.Application.Users.Commands.UpdateUser;
 

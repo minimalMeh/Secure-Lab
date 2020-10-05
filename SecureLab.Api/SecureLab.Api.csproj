@@ -6,8 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\" />
-    <Folder Include="wwwroot\" />
+    <Compile Remove="Mapper\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Mapper\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Mapper\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Mapper\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>

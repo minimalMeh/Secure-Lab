@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SecureLab.Models\SecureLab.Domain.csproj" />
+    <ProjectReference Include="..\SecureLab.Models\SecureLab.Models.csproj" />
   </ItemGroup>
 
 </Project>

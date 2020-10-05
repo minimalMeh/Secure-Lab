@@ -12,8 +12,6 @@ using FluentValidation.AspNetCore;
 using SecureLab.Application.Users.Commands.CreateUser;
 using SecureLab.Application.Users.Commands.UpdateUser;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using SecureLab.Domain.Entities.ComplexEntities;
 
 namespace SecureLab
 {
@@ -62,7 +60,6 @@ namespace SecureLab
             app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseMvc();
-            
         }
     }
 }

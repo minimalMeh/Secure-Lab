@@ -26,8 +26,7 @@ namespace SecureLab.Controllers
         [HttpGet]
         public async Task<IEnumerable<Room>> GetRooms()
         {
-            return (IEnumerable<Room>)await _mediator.Send(new GetAllRoomsQuery());
+            return await _mediator.Send(new GetAllRoomsQuery());
         }
-
     }
 }

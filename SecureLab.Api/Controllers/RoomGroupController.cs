@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
 using MediatR;
 using SecureLab.Persistence;
 using System.Threading.Tasks;
-using System.Security.Cryptography.X509Certificates;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using SecureLab.Domain.Entities;
-using System;
+using System.Collections.Generic;
 using SecureLab.Application.RoomGroups.Queries;
 
 namespace SecureLab.Controllers
