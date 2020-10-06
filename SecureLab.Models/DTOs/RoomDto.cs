@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace SecureLab.Application.RoomGroups.Queries
+namespace SecureLab.Models.DTOs
 {
-    public class RoomDTO
+    public class RoomDto
     {
         public Guid RoomId { get; set; }
         public string Number { get; set; }
