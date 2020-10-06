@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SecureLab.Domain.Entities;
 using System.Collections.Generic;
 using SecureLab.Application.RoomGroups.Queries;
+using SecureLab.Models.DTOs;
 
 namespace SecureLab.Controllers
 {
@@ -35,7 +36,7 @@ namespace SecureLab.Controllers
         }
 
         [HttpGet("rooms/{id}")]
-        public async Task<IEnumerable<RoomDTO>> GetRoomsInRoomGroup([FromRoute] Guid id)
+        public async Task<IEnumerable<RoomDto>> GetRoomsInRoomGroup([FromRoute] Guid id)
         {
             return await _mediator.Send(new GetRoomsInRoomGroupQuery { RoomGroupId = id });
         }

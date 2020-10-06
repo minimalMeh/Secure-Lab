@@ -6,17 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Mapper\**" />
     <Compile Remove="wwwroot\**" />
-    <Content Remove="Mapper\**" />
     <Content Remove="wwwroot\**" />
-    <EmbeddedResource Remove="Mapper\**" />
     <EmbeddedResource Remove="wwwroot\**" />
-    <None Remove="Mapper\**" />
     <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="MediatR" Version="8.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -28,6 +25,10 @@
     <ProjectReference Include="..\SecureLab.Application\SecureLab.Application.csproj" />
     <ProjectReference Include="..\SecureLab.Models\SecureLab.Domain.csproj" />
     <ProjectReference Include="..\SecureLab.Persistence\SecureLab.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mapper\" />
   </ItemGroup>
 
 </Project>
