@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SecureLab.Application.Users.Commands.CreateUser;
 using SecureLab.Application.Users.Commands.UpdateUser;
+using SecureLab.Models.DTOs;
+using SecureLab.Application.Users.Queries.GetAll;
+using System.Collections.Generic;
 
 namespace SecureLab.Controllers
 {
@@ -32,6 +35,12 @@ namespace SecureLab.Controllers
         {
             var result = await _mediator.Send(command);
             return CreatedAtAction("Update User", new { Id = result.UserId }, result);
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable<UserDto>> GetUsers()
+        {
+            return await _mediator.Send(new GetAllUsersQuery());
         }
     }
 }
