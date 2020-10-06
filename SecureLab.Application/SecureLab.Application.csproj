@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Users\Queries\GetUserRole\**" />
+    <Compile Remove="Users\Queries\GetUsersList\**" />
+    <EmbeddedResource Remove="Users\Queries\GetUserRole\**" />
+    <EmbeddedResource Remove="Users\Queries\GetUsersList\**" />
+    <None Remove="Users\Queries\GetUserRole\**" />
+    <None Remove="Users\Queries\GetUsersList\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Actions\Commands\CreateAction\" />
     <Folder Include="Actions\Commands\DeleteAction\" />
     <Folder Include="Actions\Commands\UpdateAction\" />
@@ -20,8 +29,6 @@
     <Folder Include="UserGroups\Commands\UpdateUserGroup\" />
     <Folder Include="UserGroups\Queries\" />
     <Folder Include="Users\Commands\DeleteUser\" />
-    <Folder Include="Users\Queries\GetUsersList\" />
-    <Folder Include="Users\Queries\GetUserRole\" />
   </ItemGroup>
 
   <ItemGroup>
