@@ -23,14 +23,14 @@ namespace SecureLab.Controllers
             this._mediator = mediator;
         }
 
-        [HttpPost("")]
+        [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command)
         {
             var result = await _mediator.Send(command);
             return CreatedAtAction("Create User", new { Id = result.UserId }, result);
         }
 
-        [HttpPut("")]
+        [HttpPut]
         public async Task<IActionResult> UpdateUser([FromBody] UpdateUserCommand command)
         {
             var result = await _mediator.Send(command);
