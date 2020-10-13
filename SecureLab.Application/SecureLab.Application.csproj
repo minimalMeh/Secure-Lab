@@ -24,7 +24,6 @@
     <Folder Include="Rooms\Commands\CreateRoom\" />
     <Folder Include="Rooms\Commands\DeleteRoom\" />
     <Folder Include="Rooms\Commands\UpdateRoom\" />
-    <Folder Include="UserGroups\Commands\CreateUserGroup\" />
     <Folder Include="UserGroups\Commands\DeleteUserGroup\" />
     <Folder Include="UserGroups\Commands\UpdateUserGroup\" />
     <Folder Include="UserGroups\Queries\" />
