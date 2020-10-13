@@ -14,12 +14,10 @@ namespace SecureLab.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly SecureLabDbContext _context;
         private readonly IMediator _mediator;
 
-        public UserController(SecureLabDbContext context, IMediator mediator)
+        public UserController(IMediator mediator)
         {
-            this._context = context;
             this._mediator = mediator;
         }
 
